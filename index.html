@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Bank Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Blood Bank Management System</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#donate">Donate Blood</a></li>
+            <li><a href="#request">Request Blood</a></li>
+            <li><a href="#inventory">Inventory</a></li>
+            <li><a href="#donors">Donor List</a></li>
+            <li><a href="#certificate">Certificate</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h2>Welcome to the Blood Bank Management System</h2>
+        <p>This system helps manage blood donations and requests efficiently.</p>
+    </section>
+
+    <section id="donate">
+        <h2>Donate Blood</h2>
+
+        <form id="donateForm">
+
+            <label>Name:</label>
+            <input type="text" id="donorName" required>
+
+            <label>Blood Type:</label>
+            <select id="bloodType" required>
+                <option value="A+">A+</option>
+                <option value="B+">B+</option>
+                <option value="O+">O+</option>
+                <option value="AB+">AB+</option>
+            </select>
+
+            <label>Donation Date:</label>
+            <input type="date" id="donationDate" required>
+
+            <button type="submit">Donate</button>
+
+        </form>
+    </section>
+
+    <section id="request">
+
+        <h2>Request Blood</h2>
+
+        <form id="requestForm">
+
+            <label>Required Blood Type:</label>
+
+            <select id="requiredBloodType">
+                <option value="A+">A+</option>
+                <option value="B+">B+</option>
+                <option value="O+">O+</option>
+                <option value="AB+">AB+</option>
+            </select>
+
+            <button type="submit">Request</button>
+
+        </form>
+
+    </section>
+
+    <section id="inventory">
+
+        <h2>Blood Inventory</h2>
+
+        <table id="inventoryTable">
+
+            <thead>
+                <tr>
+                    <th>Blood Type</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+
+            <tbody></tbody>
+
+        </table>
+
+    </section>
+
+    <section id="donors">
+
+        <h2>Donor List</h2>
+
+        <table id="donorTable">
+
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Blood Type</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+
+            <tbody></tbody>
+
+        </table>
+
+    </section>
+
+    <section id="certificate">
+
+        <h2>Download Certificate</h2>
+
+        <input type="text" id="certificateName" placeholder="Enter Name">
+
+        <button onclick="generateCertificate()">
+            Download Certificate
+        </button>
+
+    </section>
+
+    <footer>
+        <p>© 2026 Blood Bank Management System</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
